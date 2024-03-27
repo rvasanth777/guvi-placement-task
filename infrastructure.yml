@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Create three EC2 instances
+
+Resources:
+  Instance1:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-007020fd9c84e18c7 # Replace with your desired AMI ID
+      InstanceType: t2.micro
+      SecurityGroupIds:
+        - sg-0e9787cba89d467bf # Replace with your security group ID
+      KeyName: guvitask # Replace with your SSH key name
+      Tags:
+        - Key: Name
+          Value: Instance1
+
+  Instance2:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-007020fd9c84e18c7 # Replace with your desired AMI ID
+      InstanceType: t2.micro
+      SecurityGroupIds:
+        - sg-0e9787cba89d467bf # Replace with your security group ID
+      KeyName: guvitask # Replace with your SSH key name
+      Tags:
+        - Key: Name
+          Value: Instance2
+
+  Instance3:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-007020fd9c84e18c7 # Replace with your desired AMI ID
+      InstanceType: t2.micro
+      SecurityGroupIds:
+        - sg-0e9787cba89d467bf # Replace with your security group ID
+      KeyName: guvitask # Replace with your SSH key name
+      Tags:
+        - Key: Name
+          Value: Instance3
+
